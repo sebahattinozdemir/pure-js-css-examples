@@ -1,0 +1,59 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navigation Menu</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="menuToggle" onclick="toggleMenu()"></div>
+    <div class="navigation">
+      <div class="navArea">
+        <ul>
+          <li>
+            <a href="#" onmouseenter="changeImage('./images/img1.jpg')">Home</a>
+          </li>
+          <li>
+            <a href="#" onmouseenter="changeImage('./images/img2.jpg')"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="#" onmouseenter="changeImage('./images/img3.jpg')"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="#" onmouseenter="changeImage('./images/img4.jpg')"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#" onmouseenter="changeImage('./images/img5.jpg')">Team</a>
+          </li>
+          <li>
+            <a href="#" onmouseenter="changeImage('./images/img6.jpg')"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="imgArea">
+        <img src="./images/img1.jpg" id="slider" />
+      </div>
+    </div>
+    <script>
+      const changeImage = (anything) => {
+        document.getElementById("slider").src = anything;
+      };
+
+      const toggleMenu = () => {
+        const navigationMenu = document.querySelector(".menuToggle");
+        const toggleMenu = document.querySelector(".navigation");
+        navigationMenu.classList.toggle("active");
+        toggleMenu.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
